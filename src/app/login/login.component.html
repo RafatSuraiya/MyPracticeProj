@@ -6,19 +6,19 @@
     <h3>Login</h3>
   </div>
   <div class="panel-panel-body">
-      <form [formGroup]="MyForm" >
+      <form>
           <div class="form-group">
-              <label>Email:</label>
-              <input type="email" class="form-control" formControlName="email" placeholder="Enter Your email"/>
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email">
           </div>
-         <div class="form-group">
-            <label>Password:</label>
-            <input type="email"  class="form-control" formControlName="password" placeholder="Enter Your Password"/>
-         </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" name="passowrd" [(ngModel)]="password">
+          </div>
         </form>
   </div>
   <div class="panel panel-footer">
-      <button class="form-control" type="button" class="btn btn-primary">Login</button>
+      <button class="form-control" (click)="login()" type="button" class="btn btn-primary">Login</button>
   </div>
 </div>
 </div>
